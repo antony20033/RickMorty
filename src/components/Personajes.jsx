@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 function Personajes() {
-  const [characters, setCharacters] = useState([]); // personajes cargados
-  const [page, setPage] = useState(1); // página actual
-  const [search, setSearch] = useState(""); // texto de búsqueda
-  const [totalPages, setTotalPages] = useState(1); // número total de páginas
+  const [characters, setCharacters] = useState([]); 
+  const [page, setPage] = useState(1); 
+  const [search, setSearch] = useState(""); 
+  const [totalPages, setTotalPages] = useState(1); 
 
   const fetchCharacters = async (pageNumber = 1, name = "") => {
     try {
@@ -87,7 +87,7 @@ function Personajes() {
 
       <section className="page-numbers">
         {}
-        {[...Array(Math.min(totalPages, 10))].map((_, i) => (
+        {[...Array(Math.min(totalPages, 42))].map((_, i) => (
           <button
             key={i}
             className={`page-btn ${page === i + 1 ? "active" : ""}`}
